@@ -1,0 +1,55 @@
+ul {
+  display: flex;
+  gap: 1rem;
+
+  list-style: none;
+}
+
+li {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 1rem;
+  padding: 0.9rem;
+  transition: background 0.3s;
+  display: block;
+}
+
+.menu > li:hover {
+  background: #1d52ff;
+}
+
+.menu > li:hover > .submenu,
+.submenu > li:hover > .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 48.5px;
+  background: #1d52ff;
+  transition: filter 0.3s;
+  min-width: 120%;
+}
+
+ul.submenu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.submenu li:hover {
+  filter: brightness(0.8);
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu li .submenu {
+  top: 0;
+  left: 100%;
+}
